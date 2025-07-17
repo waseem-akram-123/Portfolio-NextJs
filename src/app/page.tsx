@@ -18,7 +18,7 @@ const fadeIn = {
 export default function Page() {
   const [mounted, setMounted] = useState(false);
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
-  const { theme } = useTheme();
+  // const { theme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -254,21 +254,21 @@ export default function Page() {
             </h2>
             <div className="text-center">
               <p className="text-lg text-muted-foreground mb-4">
-                I'm a passionate full-stack developer with expertise in modern
-                web technologies. My journey in software development began with
-                a curiosity for building things, which has evolved into a
-                professional career creating robust web applications.
+                I&apos;m a passionate full-stack developer... web technologies.
+                My journey in software development began with a curiosity for
+                building things, which has evolved into a professional career
+                creating robust web applications.
               </p>
               <p className="text-lg text-muted-foreground mb-4">
                 I specialize in JavaScript ecosystems, particularly Next.js and
                 React for frontend development, and Node.js with Express for
-                backend services. I'm also proficient in database design with
-                both SQL and NoSQL solutions.
+                backend services. I&apos;m also proficient in database design
+                with both SQL and NoSQL solutions.
               </p>
               <p className="text-lg text-muted-foreground">
-                When I'm not coding, you can find me contributing to open source
-                projects, learning new technologies, or sharing knowledge with
-                the developer community.
+                When I&apos;m not coding, you can find me contributing to open
+                source projects, learning new technologies, or sharing knowledge
+                with the developer community.
               </p>
             </div>
           </motion.div>
@@ -276,38 +276,37 @@ export default function Page() {
       </section>
 
       {/* Skills Section */}
-<section id="skills" className="py-20 px-6 max-w-6xl mx-auto">
-  <h2 className="text-3xl font-bold text-center mb-10">Skills</h2>
-  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
-    {[
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Tailwind CSS",
-      "Java & DSA",
-      "Next.js",
-      "Express.js",
-      "MongoDB",
-      "SQL",
-      "Render",
-      "Vercel",
-      "Git",
-      "GitHub",
-    ].map((skill) => (
-      <li
-        key={skill}
-        className="rounded-xl py-4 px-2 font-medium text-sm shadow-md transition-all duration-300 hover:scale-105
+      <section id="skills" className="py-20 px-6 max-w-6xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-10">Skills</h2>
+        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 text-center">
+          {[
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Tailwind CSS",
+            "Java & DSA",
+            "Next.js",
+            "Express.js",
+            "MongoDB",
+            "SQL",
+            "Render",
+            "Vercel",
+            "Git",
+            "GitHub",
+          ].map((skill) => (
+            <li
+              key={skill}
+              className="rounded-xl py-4 px-2 font-medium text-sm shadow-md transition-all duration-300 hover:scale-105
           bg-zinc-100 text-zinc-800
           dark:bg-zinc-800 dark:text-white
           hover:bg-blue-400 hover:text-white
           dark:hover:bg-blue-500 dark:hover:text-black"
-      >
-        {skill}
-      </li>
-    ))}
-  </ul>
-</section>
-
+            >
+              {skill}
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
