@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedin, FaWhatsapp, FaTelegram } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { FiExternalLink } from "react-icons/fi";
 import { motion } from "framer-motion";
-import { useTheme } from "next-themes";
+import TechMarquee from "@/components/TechMarquee";
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -18,7 +18,6 @@ const fadeIn = {
 export default function Page() {
   const [mounted, setMounted] = useState(false);
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
-  // const { theme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
@@ -52,8 +51,8 @@ export default function Page() {
         "Designed to simplify decision-making for farmers using structured knowledge.",
       ],
       technologies: ["Next.js", "MongoDB", "Tailwind CSS", "JWT Auth"],
-      sourceLink: "https://github.com/yourusername/agribloom",
-      visitLink: "https://agribloom.vercel.app",
+      sourceLink: "https://github.com/waseem-akram-123/AgriBloom",
+      visitLink: "/",
     },
     {
       title: "Music Studio",
@@ -70,8 +69,8 @@ export default function Page() {
         "Designed to offer a clean, polished, and immersive music-focused user experience.",
       ],
       technologies: ["Next.js", "Tailwind CSS", "Aceternity UI"],
-      sourceLink: "https://github.com/yourusername/music-studio",
-      visitLink: "https://agribloom.vercel.app",
+      sourceLink: "https://github.com/waseem-akram-123/music-studio",
+      visitLink: "https://music-studio-chi.vercel.app/",
     },
     {
       title: "Blogging Platform",
@@ -89,8 +88,8 @@ export default function Page() {
         "Focuses on content creation, interaction, and community engagement.",
       ],
       technologies: ["Node.js", "Express.js", "MongoDB", "JWT Auth"],
-      sourceLink: "https://github.com/yourusername/blogging-platform",
-      visitLink: "https://agribloom.vercel.app",
+      sourceLink: "https://github.com/waseem-akram-123/Nodejs-Blogging",
+      visitLink: "https://nodejs-blogging.onrender.com",
     },
     {
       title: "URL Shortener",
@@ -108,8 +107,8 @@ export default function Page() {
         "Focused on utility, speed, and secure access to user-specific URL data.",
       ],
       technologies: ["Node.js", "Express.js", "MongoDB", "JWT Auth"],
-      sourceLink: "https://github.com/yourusername/url-shortener",
-      visitLink: "https://agribloom.vercel.app",
+      sourceLink: "https://github.com/waseem-akram-123/Nodejs-URL-SHORTNER",
+      visitLink: "https://nodejs-url-shortner-tqrl.onrender.com",
     },
     {
       title: "Restaurant Manager",
@@ -126,8 +125,8 @@ export default function Page() {
         "Clean and responsive UI for browsing the menu and ordering food.",
       ],
       technologies: ["Node.js", "Express.js", "MongoDB", "JWT Auth", "Twilio"],
-      sourceLink: "https://github.com/yourusername/restaurant-manager",
-      visitLink: "https://agribloom.vercel.app",
+      sourceLink: "https://github.com/waseem-akram-123/NodeJS-Restaurant",
+      visitLink: "https://nodejs-restaurant-1.onrender.com",
     },
   ];
 
@@ -146,6 +145,12 @@ export default function Page() {
               </button>
             </div>
             <nav className="hidden md:flex items-center space-x-8">
+              <button
+                onClick={() => scrollTo("home")}
+                className="text-base font-medium hover:text-primary transition-colors"
+              >
+                Home
+              </button>
               <button
                 onClick={() => scrollTo("about")}
                 className="text-base font-medium hover:text-primary transition-colors"
@@ -230,7 +235,7 @@ export default function Page() {
               onClick={() => scrollTo("contact")}
               size="lg"
             >
-              Contact Me
+              Contact
             </Button>
           </motion.div>
         </motion.div>
@@ -291,8 +296,7 @@ export default function Page() {
             "SQL",
             "Render",
             "Vercel",
-            "Git",
-            "GitHub",
+            "Git & Github",
           ].map((skill) => (
             <li
               key={skill}
@@ -300,13 +304,15 @@ export default function Page() {
           bg-zinc-100 text-zinc-800
           dark:bg-zinc-800 dark:text-white
           hover:bg-blue-400 hover:text-white
-          dark:hover:bg-blue-500 dark:hover:text-black"
+          dark:hover:bg-blue-300 dark:hover:text-black"
             >
               {skill}
             </li>
           ))}
         </ul>
       </section>
+
+      <TechMarquee />
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 sm:px-6 lg:px-8">
@@ -327,7 +333,7 @@ export default function Page() {
                   key={index}
                   variants={fadeIn}
                   transition={{ delay: index * 0.2 }}
-                  className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-background border border-border rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-300"
                 >
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
@@ -423,7 +429,7 @@ export default function Page() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">
-              Contact <span className="text-primary">Me</span>
+              Get into Touch
             </h2>
             <div className="flex flex-wrap justify-center gap-8">
               <a
