@@ -51,8 +51,8 @@ export default function Page() {
         "Designed to simplify decision-making for farmers using structured knowledge.",
       ],
       technologies: ["Next.js", "MongoDB", "Tailwind CSS", "JWT Auth"],
-      sourceLink: "https://github.com/waseem-akram-123/AgriBloom",
-      visitLink: "/",
+      sourceLink: "https://github.com/waseem-akram-123/agribloom2.0",
+      visitLink: "https://agribloom2-0.vercel.app/",
     },
     {
       title: "Music Studio",
